@@ -73,4 +73,4 @@ while(True):
 				logging.info("positionId not found!")
 		except Exception as e:
 			logging.info("exception: {0}".format(e))
-			break
+			continue
