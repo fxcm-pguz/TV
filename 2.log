@@ -1,0 +1,21 @@
+2019-07-16 21:03:11,566 connect()
+2019-07-16 21:03:13,066 connected
+2019-07-16 21:03:13,722 request(POST,/trading/subscribe,{'models': 'Order'}) response(200:{"response":{"executed":true}})
+2019-07-16 21:03:14,316 request(GET,/trading/get_model,{'models': 'Account'}) response(200:{"response":{"executed":true},"accounts":[{"t":6,"ratePrecision":0,"accountId":"648329","balance":504825.62,"usdMr":10,"mc":"N","mcDate":"","accountName":"00648329","usdMr3":20,"hedging":"Y","usableMargin3":504805.47494,"usableMarginPerc":99.99802,"usableMargin3Perc":99.99604,"equity":504825.47494,"usableMargin":504815.47494,"dayPL":-265.01506,"grossPL":-0.14506},{"t":6,"ratePrecision":0,"accountId":"","balance":504825.62,"usdMr":10,"mc":"","mcDate":null,"accountName":"","usdMr3":20,"hedging":"","usableMargin3":504805.47494,"usableMarginPerc":99.99802,"usableMargin3Perc":99.99604,"equity":504825.47494,"usableMargin":504815.47494,"dayPL":-265.01506,"grossPL":-0.14506,"isTotal":true}]})
+2019-07-16 21:03:14,957 got positionID: 116067173
+2019-07-16 21:03:14,957 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714245}})
+2019-07-16 21:03:18,582 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116067173', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714246}})
+2019-07-16 21:03:19,254 request(POST,/trading/close_trade,{'trade_id': '116067173', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714248}})
+2019-07-16 21:13:19,847 got positionID: 116067281
+2019-07-16 21:13:19,847 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714451}})
+2019-07-16 21:13:23,472 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116067281', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714452}})
+2019-07-16 21:13:24,222 request(POST,/trading/close_trade,{'trade_id': '116067281', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714454}})
+2019-07-16 21:23:24,832 got positionID: 116067342
+2019-07-16 21:23:24,832 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714629}})
+2019-07-16 21:23:28,426 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116067342', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714630}})
+2019-07-16 21:23:29,051 request(POST,/trading/close_trade,{'trade_id': '116067342', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714632}})
+2019-07-16 21:33:29,676 got positionID: 116067495
+2019-07-16 21:33:29,676 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714994}})
+2019-07-16 21:33:33,254 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116067495', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714995}})
+2019-07-16 21:33:33,879 request(POST,/trading/close_trade,{'trade_id': '116067495', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200714998}})
+2019-07-16 21:45:34,519 exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

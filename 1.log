@@ -1,0 +1,21 @@
+2019-07-16 17:26:16,659 connect()
+2019-07-16 17:26:18,675 connected
+2019-07-16 17:26:19,362 request(POST,/trading/subscribe,{'models': 'Order'}) response(200:{"response":{"executed":true}})
+2019-07-16 17:26:20,190 request(GET,/trading/get_model,{'models': 'Account'}) response(200:{"response":{"executed":true},"accounts":[{"t":6,"ratePrecision":0,"accountId":"648329","balance":504894.1,"usdMr":10,"mc":"N","mcDate":"","accountName":"00648329","usdMr3":20,"hedging":"Y","usableMargin3":504873.62481,"usableMarginPerc":99.99802,"usableMargin3Perc":99.99604,"equity":504893.62481,"usableMargin":504883.62481,"dayPL":-196.86519,"grossPL":-0.47519},{"t":6,"ratePrecision":0,"accountId":"","balance":504894.1,"usdMr":10,"mc":"","mcDate":null,"accountName":"","usdMr3":20,"hedging":"","usableMargin3":504873.62481,"usableMarginPerc":99.99802,"usableMargin3Perc":99.99604,"equity":504893.62481,"usableMargin":504883.62481,"dayPL":-196.86519,"grossPL":-0.47519,"isTotal":true}]})
+2019-07-16 17:26:20,800 got positionID: 116060196
+2019-07-16 17:26:20,800 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200695642}})
+2019-07-16 17:26:24,659 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116060196', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200695645}})
+2019-07-16 17:26:25,800 request(POST,/trading/close_trade,{'trade_id': '116060196', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200695755}})
+2019-07-16 17:36:26,425 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200696567}})
+2019-07-16 17:36:26,425 got positionID: 116060601
+2019-07-16 17:36:30,300 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116060601', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200696571}})
+2019-07-16 17:36:31,300 request(POST,/trading/close_trade,{'trade_id': '116060601', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200696573}})
+2019-07-16 17:46:31,925 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200697770}})
+2019-07-16 17:46:32,050 got positionID: 116060961
+2019-07-16 17:46:35,581 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116060961', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200697778}})
+2019-07-16 17:46:36,206 request(POST,/trading/close_trade,{'trade_id': '116060961', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200697780}})
+2019-07-16 17:56:36,893 got positionID: 116061674
+2019-07-16 17:56:36,893 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200701088}})
+2019-07-16 17:56:40,690 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116061674', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200701089}})
+2019-07-16 17:56:41,362 request(POST,/trading/close_trade,{'trade_id': '116061674', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200701094}})
+2019-07-16 18:08:41,987 exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

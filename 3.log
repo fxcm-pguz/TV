@@ -1,0 +1,26 @@
+2019-07-17 01:01:01,544 connect()
+2019-07-17 01:01:02,887 connected
+2019-07-17 01:01:03,591 request(POST,/trading/subscribe,{'models': 'Order'}) response(200:{"response":{"executed":true}})
+2019-07-17 01:01:05,231 request(GET,/trading/get_model,{'models': 'Account'}) response(200:{"response":{"executed":true},"accounts":[{"t":6,"ratePrecision":0,"accountId":"648329","balance":504617.79,"usdMr":10,"mc":"N","mcDate":"","accountName":"00648329","usdMr3":20,"hedging":"Y","usableMargin3":504597.54019,"usableMarginPerc":99.99802,"usableMargin3Perc":99.99604,"equity":504617.54019,"usableMargin":504607.54019,"dayPL":-170.78981,"grossPL":-0.24981},{"t":6,"ratePrecision":0,"accountId":"","balance":504617.79,"usdMr":10,"mc":"","mcDate":null,"accountName":"","usdMr3":20,"hedging":"","usableMargin3":504597.54019,"usableMarginPerc":99.99802,"usableMargin3Perc":99.99604,"equity":504617.54019,"usableMargin":504607.54019,"dayPL":-170.78981,"grossPL":-0.24981,"isTotal":true}]})
+2019-07-17 01:01:07,216 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200722650}})
+2019-07-17 01:01:07,575 got positionID: 116070023
+2019-07-17 01:01:10,794 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116070023', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200722651}})
+2019-07-17 01:01:12,044 request(POST,/trading/close_trade,{'trade_id': '116070023', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200722653}})
+2019-07-17 01:11:12,872 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200722795}})
+2019-07-17 01:11:12,903 got positionID: 116070058
+2019-07-17 01:11:16,528 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116070058', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200722796}})
+2019-07-17 01:11:17,153 request(POST,/trading/close_trade,{'trade_id': '116070058', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200722798}})
+2019-07-17 01:21:17,731 got positionID: 116070146
+2019-07-17 01:21:17,731 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200723006}})
+2019-07-17 01:21:21,325 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116070146', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200723007}})
+2019-07-17 01:21:21,950 request(POST,/trading/close_trade,{'trade_id': '116070146', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200723009}})
+2019-07-17 01:31:22,528 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":false,"error":"Unauthorized"}})
+2019-07-17 01:31:26,091 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116070146', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":false,"error":"Unauthorized"}})
+2019-07-17 01:31:26,684 request(POST,/trading/close_trade,{'trade_id': '116070146', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":false,"error":"Unauthorized"}})
+2019-07-17 01:31:26,684 trade change or trade close failed
+2019-07-17 01:37:04,372 error: 4010 SocketIO got disconnect packet.
+2019-07-17 01:37:04,497 disconnected: 1000 b''
+2019-07-17 01:41:26,684 socket.io disconnected. disconnecting
+2019-07-17 01:41:26,684 connect()
+2019-07-17 01:41:28,325 error: 4009 "Not authorized"
+2019-07-17 01:41:28,325 could not connect. aborting
