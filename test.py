@@ -24,16 +24,19 @@ def onDisconnect(code, reason=''):
 	logging.info("disconnected: {0} {1}".format(code, reason))
 	r.state = "disconnected: {0} {1}".format(code, reason)
 
+logging.basicConfig(
+	level=logging.INFO,
+	format="%(asctime)s %(message)s"
+)
+
 count = 0
 while(True):
 	count += 1
-	logging.basicConfig(
-		level=logging.INFO,
-		format="%(asctime)s %(message)s",
-		handlers=[
-			logging.FileHandler("{0}-{1}.log".format(args.logfile,count)),
-			logging.StreamHandler(sys.stdout)
-		])
+	
+	logging.getLogger().handlers = [
+		logging.FileHandler("{0}-{1}.log".format(args.logfile,count)),
+		logging.StreamHandler(sys.stdout)
+	]
 	
 	while(True):
 		c = fxcmrest.Config(args.server, token=args.token)
