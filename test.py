@@ -46,7 +46,7 @@ while(True):
 		r.connect()
 		if not r.isConnected():
 			logging.info("could not connect. waiting...")
-			time.sleep(60*15)
+			time.sleep(60*5)
 		else:
 			break
 	
