@@ -1,0 +1,11 @@
+2019-07-17 15:21:59,860 connect()
+2019-07-17 15:22:18,312 connected
+2019-07-17 15:22:19,148 request(POST,/trading/subscribe,{'models': 'Order'}) response(200:{"response":{"executed":true}})
+2019-07-17 15:22:19,757 request(GET,/trading/get_model,{'models': 'Account'}) response(200:{"response":{"executed":true},"accounts":[{"t":6,"ratePrecision":0,"accountId":"648329","balance":504311.55,"usdMr":5000,"mc":"N","mcDate":"","accountName":"00648329","usdMr3":10000,"hedging":"Y","usableMargin3":494498.92404,"usableMarginPerc":99.00892,"usableMargin3Perc":98.01784,"equity":504498.92404,"usableMargin":499498.92404,"dayPL":-289.40596,"grossPL":187.37404},{"t":6,"ratePrecision":0,"accountId":"","balance":504311.55,"usdMr":5000,"mc":"","mcDate":null,"accountName":"","usdMr3":10000,"hedging":"","usableMargin3":494498.92404,"usableMarginPerc":99.00892,"usableMargin3Perc":98.01784,"equity":504498.92404,"usableMargin":499498.92404,"dayPL":-289.40596,"grossPL":187.37404,"isTotal":true}]})
+2019-07-17 15:22:19,765 running an order...
+2019-07-17 15:22:20,585 got positionID: 116082753
+2019-07-17 15:22:20,624 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200755539}})
+2019-07-17 15:22:24,226 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116082753', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200755540}})
+2019-07-17 15:22:24,921 request(POST,/trading/close_trade,{'trade_id': '116082753', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200755542}})
+2019-07-17 15:23:32,984 disconnected: 1000 b''
+2019-07-17 15:32:24,926 socket.io disconnected. disconnecting
