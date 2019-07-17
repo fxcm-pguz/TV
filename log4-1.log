@@ -1,0 +1,28 @@
+connect()
+connected
+request(POST,/trading/subscribe,{'models': 'Order'}) response(200:{"response":{"executed":true}})
+request(GET,/trading/get_model,{'models': 'Account'}) response(200:{"response":{"executed":true},"accounts":[{"t":6,"ratePrecision":0,"accountId":"648329","balance":504467.86,"usdMr":1000,"mc":"N","mcDate":"","accountName":"00648329","usdMr3":2000,"hedging":"Y","usableMargin3":502536.14631,"usableMarginPerc":99.8018,"usableMargin3Perc":99.6036,"equity":504536.14631,"usableMargin":503536.14631,"dayPL":-252.18369,"grossPL":68.28631},{"t":6,"ratePrecision":0,"accountId":"","balance":504467.86,"usdMr":1000,"mc":"","mcDate":null,"accountName":"","usdMr3":2000,"hedging":"","usableMargin3":502536.14631,"usableMarginPerc":99.8018,"usableMargin3Perc":99.6036,"equity":504536.14631,"usableMargin":503536.14631,"dayPL":-252.18369,"grossPL":68.28631,"isTotal":true}]})
+request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200743943}})
+got positionID: 116078026
+request(POST,/trading/change_trade_stop_limit,{'trade_id': '116078026', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200743944}})
+request(POST,/trading/close_trade,{'trade_id': '116078026', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200743946}})
+request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200744290}})
+got positionID: 116078108
+request(POST,/trading/change_trade_stop_limit,{'trade_id': '116078108', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200744291}})
+request(POST,/trading/close_trade,{'trade_id': '116078108', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200744293}})
+request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200744866}})
+got positionID: 116078281
+request(POST,/trading/change_trade_stop_limit,{'trade_id': '116078281', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200744867}})
+request(POST,/trading/close_trade,{'trade_id': '116078281', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200744869}})
+request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200746548}})
+got positionID: 116078825
+request(POST,/trading/change_trade_stop_limit,{'trade_id': '116078825', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200746554}})
+request(POST,/trading/close_trade,{'trade_id': '116078825', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200746556}})
+exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+exception: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

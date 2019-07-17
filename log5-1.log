@@ -1,0 +1,27 @@
+2019-07-17 13:30:17,980 connect()
+2019-07-17 13:30:19,184 connected
+2019-07-17 13:30:19,887 request(POST,/trading/subscribe,{'models': 'Order'}) response(200:{"response":{"executed":true}})
+2019-07-17 13:30:20,621 request(GET,/trading/get_model,{'models': 'Account'}) response(200:{"response":{"executed":true},"accounts":[{"t":6,"ratePrecision":0,"accountId":"648329","balance":504409.04,"usdMr":4000,"mc":"N","mcDate":"","accountName":"00648329","usdMr3":8000,"hedging":"Y","usableMargin3":496370.02481,"usableMarginPerc":99.20693,"usableMargin3Perc":98.41386,"equity":504370.02481,"usableMargin":500370.02481,"dayPL":-418.30519,"grossPL":-39.01519},{"t":6,"ratePrecision":0,"accountId":"","balance":504409.04,"usdMr":4000,"mc":"","mcDate":null,"accountName":"","usdMr3":8000,"hedging":"","usableMargin3":496370.02481,"usableMarginPerc":99.20693,"usableMargin3Perc":98.41386,"equity":504370.02481,"usableMargin":500370.02481,"dayPL":-418.30519,"grossPL":-39.01519,"isTotal":true}]})
+2019-07-17 13:30:20,629 running an order...
+2019-07-17 13:30:21,262 got positionID: 116079971
+2019-07-17 13:30:21,270 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200748958}})
+2019-07-17 13:30:24,848 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116079971', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200748959}})
+2019-07-17 13:30:25,801 request(POST,/trading/close_trade,{'trade_id': '116079971', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200748961}})
+2019-07-17 13:40:25,804 running an order...
+2019-07-17 13:40:26,772 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200750191}})
+2019-07-17 13:40:27,124 got positionID: 116080506
+2019-07-17 13:40:30,608 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116080506', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200750195}})
+2019-07-17 13:40:31,538 request(POST,/trading/close_trade,{'trade_id': '116080506', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200750197}})
+2019-07-17 13:50:31,336 running an order...
+2019-07-17 13:50:32,156 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200751007}})
+2019-07-17 13:50:32,180 got positionID: 116080886
+2019-07-17 13:50:35,734 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116080886', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200751008}})
+2019-07-17 13:50:36,742 request(POST,/trading/close_trade,{'trade_id': '116080886', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200751010}})
+2019-07-17 14:00:36,743 running an order...
+2019-07-17 14:00:37,892 request(POST,/trading/open_trade,{'account_id': '648329', 'symbol': 'EUR/USD', 'is_buy': 'true', 'amount': 100, 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200751385}})
+2019-07-17 14:00:38,118 got positionID: 116081046
+2019-07-17 14:00:41,829 request(POST,/trading/change_trade_stop_limit,{'trade_id': '116081046', 'is_stop': 'true', 'rate': -20}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200751386}})
+2019-07-17 14:00:42,696 request(POST,/trading/close_trade,{'trade_id': '116081046', 'amount': 100, 'order_type': 'AtMarket', 'time_in_force': 'FOK'}) response(200:{"response":{"executed":true},"data":{"type":0,"orderId":200751388}})
+2019-07-17 14:06:22,128 error: 4010 SocketIO got disconnect packet.
+2019-07-17 14:06:22,261 disconnected: 1000 b''
+2019-07-17 14:10:42,698 socket.io disconnected. disconnecting
