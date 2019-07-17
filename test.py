@@ -25,18 +25,19 @@ def onDisconnect(code, reason=''):
 	r.state = "disconnected: {0} {1}".format(code, reason)
 
 logging.basicConfig(
-	level=logging.INFO,
-	format="%(asctime)s %(message)s"
+	level=logging.INFO
 )
+formatter = logging.Formatter("%(asctime)s %(message)s")
+sh = logging.StreamHandler(sys.stdout)
+sh.setFormatter(formatter)
 
 count = 0
 while(True):
 	count += 1
 	
-	logging.getLogger().handlers = [
-		logging.FileHandler("{0}-{1}.log".format(args.logfile,count)),
-		logging.StreamHandler(sys.stdout)
-	]
+	fh = logging.FileHandler("{0}-{1}.log".format(args.logfile,count))
+	fh.setFormatter(formatter)
+	logging.getLogger().handlers = [ fh, sh ]
 	
 	while(True):
 		c = fxcmrest.Config(args.server, token=args.token)
@@ -57,6 +58,7 @@ while(True):
 		if not r.isConnected():
 			logging.info("socket.io disconnected. disconnecting")
 			break
+		logging.info("running an order...")
 		orderId = False
 		ok1 = False
 		ok2 = False
